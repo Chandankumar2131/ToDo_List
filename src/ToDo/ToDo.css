@@ -1,0 +1,216 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Todo Container */
+.todo-container {
+    width: 90%;
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+}
+
+/* Header */
+header h1 {
+    font-size: 2rem;
+    color: #6a0572;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Form Section */
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.todo-input {
+    flex: 1; /* Input takes up remaining space */
+    padding: 12px 15px;
+    border: 2px solid #6a0572;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+    color: #333;
+}
+
+.todo-input:focus {
+    border-color: #ab47bc;
+    box-shadow: 0 0 6px rgba(171, 71, 188, 0.5);
+}
+
+/* Button Styling */
+.todo-btn {
+    padding: 12px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    background: #ab47bc;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    flex-shrink: 0; /* Button keeps its size */
+}
+
+.todo-btn:hover {
+    background: #8e24aa;
+    transform: scale(1.03);
+}
+
+.todo-btn:active {
+    transform: scale(1);
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 480px) {
+    .form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .todo-btn {
+        width: 100%;
+    }
+}
+/* List Item Styling */
+.todoLi {
+font-size: large;
+    background-color: #f5f5f5; /* Light gray background for contrast */
+     /* Hover and click effects */
+     margin-top: 10px;
+     padding: 15px;
+     border-radius: 10px;
+     display: flex;
+     justify-content: space-between;
+}
+
+/* Hover Effect */
+.todoLi:hover {
+    background-color: #88c1f6; /* Slightly darker background on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Active Effect (When clicked) */
+.todoLi:active {
+    transform: translateY(0); /* Reset lift effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+/* Check Button Styling */
+/* Check Button Styling */
+.check-btn {
+    background-color: #45e076; /* Green background for a completed task */
+    color: #ffffff; /* White icon color */
+    border: none;
+    border-radius: 50%; /* Circular button */
+    padding: 10px; /* Adjust padding for better size */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem; /* Icon size */
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-left: 10px; /* Add spacing between buttons */
+}
+.check-btn:hover {
+    transform: scale(1.1);
+    background-color: #37c866;
+}
+
+/* Delete Button Styling */
+.delete-btn {
+    background-color: #d52222; /* Red background for delete */
+    color: #ffffff; /* White icon color */
+    border: none;
+    border-radius: 50%; /* Circular button */
+    padding: 10px; /* Adjust padding for better size */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem; /* Icon size */
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-left: 10px; /* Add spacing between buttons */
+}
+.delete-btn:hover {
+    transform: scale(1.1);
+    background-color: #bf1f1f;
+}
+
+/* List Item Styling for Flex Alignment */
+.todoLi {
+    font-size: large;
+    background-color: #f5f5f5; /* Light gray background for contrast */
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between; /* Ensures even spacing between text and buttons */
+    align-items: center;
+}
+
+.todoLi span {
+    flex: 1; /* Allow the text to take available space */
+    margin-right: 10px; /* Add space between the text and buttons */
+}
+
+
+
+.chandan {
+    position: fixed; /* Ensure the position is relative to the viewport */
+    bottom: 0; /* Align to the bottom */
+    right:  0; /* Align to the left */
+    margin: 0; /* Remove any default margin */
+    padding: 20px; /* Optional padding for spacing */
+    text-align: right; /* Ensure text is aligned to the left */
+    width: auto; /* Make sure it spans the full width if needed */
+}
+
+.chandan h2 {
+    margin: 0; /* Remove margin from h2 */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    color: #6a0572; /* Optional: Custom color for the h2 */
+}
+.deleteAll {
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-left: 90px;
+    font-size: 1rem;
+    background: red;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    flex-shrink: 0; /* Button keeps its size */
+}
+
+.deleteAll:hover {
+    background: #ac0404;
+    transform: scale(1.03);
+}
+
+.deleteAll:active {
+    transform: scale(1);
+}
